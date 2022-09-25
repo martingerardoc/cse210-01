@@ -1,4 +1,9 @@
+from pickle import TRUE
 import random
+
+#Tictactoe by Martin Cespedes
+
+#This is the board
 
 board = ["-", "-", "-",
 
@@ -28,9 +33,9 @@ def printBoard(board):
 
     print(board[6] + " | " + board[7] + " | " + board[8])
 
- 
 
- 
+
+
 
 # take player input
 
@@ -206,24 +211,26 @@ def computer(board):
 
  
 
- 
+if __name__ == '__main__':
+   # def main():
+        while gameRunning:
 
-while gameRunning:
+            printBoard(board)
 
-    printBoard(board)
+            playerInput(board)
 
-    playerInput(board)
+            checkIfWin(board)
 
-    checkIfWin(board)
+            checkIfTie(board)
 
-    checkIfTie(board)
+            switchPlayer()
 
-    switchPlayer()
+            computer(board)
 
-    computer(board)
+            checkIfWin(board)
 
-    checkIfWin(board)
+            checkIfTie(board)
 
-    checkIfTie(board)
+    
 
  
